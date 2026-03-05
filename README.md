@@ -1,6 +1,6 @@
 # Olá, eu sou o André! 👋
 
-Sou estudante de Engenharia da Computação na UFPE e apaixonado por transformar dados brutos em soluções eficientes. Meu foco principal é a área de **Engenharia de Dados**, criando arquiteturas escaláveis e pipelines otimizados.
+Sou estudante de Engenharia da Computação na UFPE com foco em Engenharia de Dados. Trabalho no desenvolvimento de pipelines ponta a ponta, processamento distribuído de grandes volumes de informação e implementação de arquiteturas modernas (como Lakehouse e Medallion) para entregar dados consistentes e prontos para análise.
 
 - 🔭 **Atualmente estou trabalhando em:** Construir e expandir meu portfólio de Engenharia de Dados, desenvolvendo projetos práticos que envolvem modelagem de dados, pipelines ETL e arquiteturas Lakehouse.
 - 🌱 **Atualmente estou aprendendo:** Aprofundando meus conhecimentos em processamento distribuído com **PySpark**, ambiente **Databricks**, orquestração de dados e soluções em Cloud (como Azure).
