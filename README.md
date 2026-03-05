@@ -35,4 +35,4 @@ Sou estudante de Engenharia da Computação na UFPE e apaixonado por transformar
   * **Stack:** Python (Polars, Pandas), Google Cloud Storage (GCP), PostgreSQL, Google Looker Studio
  
 ### 📫 Como me encontrar 
-* Você pode se conectar comigo no [LinkedIn](www.linkedin.com/in/andredovalevoigt).
+* Você pode se conectar comigo no [LinkedIn](https://www.linkedin.com/in/andredovalevoigt).
