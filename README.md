@@ -18,6 +18,10 @@ Sou estudante de Engenharia da Computação na UFPE com foco em Engenharia de Da
 
 ### 🚀 Principais Projetos
 
+* **[Monitor de Preços de Combustíveis (ANP)](https://github.com/AndreVVoigt/monitor-preco-combustiveis)**
+  * **Resumo:** Desenvolvimento de um pipeline de dados automatizado para monitoramento contínuo dos preços de combustíveis no Brasil, utilizando dados públicos da ANP. O projeto realiza a ingestão recorrente (semanal) via web scraping, tratamento e padronização de dados históricos e incrementais, lidando com inconsistências de schema ao longo dos anos. Os dados são processados e estruturados para análise temporal e regional, permitindo acompanhar variações de preços ao longo do tempo.
+  * **Stack:** Python (Web Scraping, Pandas/PySpark), Databricks, SQL
+
 * **[Lakehouse Ecommerce](https://github.com/AndreVVoigt/lakehouse_ecommerce)**
   * **Resumo:** Construção de um pipeline de dados ponta a ponta utilizando a arquitetura Medallion (Bronze, Silver, Gold). O projeto realiza a ingestão, limpeza e agregação de dados reais, com orquestração via Apache Airflow e processamento distribuído usando Spark no AWS EMR Serverless, deixando os dados prontos para consumo no Amazon Athena e ferramentas de BI.
   * **Stack:** AWS (EMR Serverless, Athena), Apache Spark, Apache Airflow, Python
