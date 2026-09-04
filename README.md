@@ -1,9 +1,10 @@
 # Olá, eu sou o André! 👋
 
-Sou estudante de Engenharia da Computação na UFPE com foco em Engenharia de Dados. Trabalho no desenvolvimento de pipelines ponta a ponta, processamento distribuído de grandes volumes de informação e implementação de arquiteturas modernas (como Lakehouse e Medallion) para entregar dados consistentes e prontos para análise.
+Sou estudante de Engenharia da Computação na UFPE com foco em Engenharia de Dados. Trabalho no desenvolvimento de pipelines ponta a ponta, processamento distribuído de grandes volumes de informação e implementação de arquiteturas modernas (como Lakehouse e Medallion) para entregar dados consistentes e prontos para análise. Sou membro da [LED | CIn - UFPE](https://www.linkedin.com/company/led-cin-ufpe/), a Liga de Engenharia de Dados do Centro de Informática.
 
 - 🔭 **Atualmente estou trabalhando em:** Construir e expandir meu portfólio de Engenharia de Dados, desenvolvendo projetos práticos que envolvem modelagem de dados, pipelines ETL e arquiteturas Lakehouse.
 - 🌱 **Atualmente estou aprendendo:** Aprofundando meus conhecimentos em processamento distribuído com **PySpark**, ambiente **Databricks**, orquestração de dados e soluções em Cloud (como Azure).
+- 🤝 **Faço parte da:** [LED | CIn - UFPE](https://www.linkedin.com/company/led-cin-ufpe/), liga acadêmica de Engenharia de Dados do CIn, participando de projetos práticos em equipe.
 
 ---
 
@@ -13,6 +14,12 @@ Sou estudante de Engenharia da Computação na UFPE com foco em Engenharia de Da
 * **Engenharia de Dados & Big Data:** PySpark, Databricks, Modelagem Dimensional
 * **Cloud & Ferramentas:** Azure, Git, GitHub
 * **Análise de Dados:** Pandas, Power BI
+
+---
+
+### 📜 Certificações
+
+* **[Microsoft Certified: Azure Data Fundamentals (DP-900)](https://learn.microsoft.com/api/credentials/share/pt-br/AndreVoigt-2563/324319CA09255D65?sharingId=5051D8804E941A27)** — Microsoft, agosto de 2026
 
 ---
 
