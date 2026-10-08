@@ -1,49 +1,62 @@
-# Olá, eu sou o André! 👋
+# André Voigt
 
-Sou estudante de Engenharia da Computação na UFPE com foco em Engenharia de Dados. Trabalho no desenvolvimento de pipelines ponta a ponta, processamento distribuído de grandes volumes de informação e implementação de arquiteturas modernas (como Lakehouse e Medallion) para entregar dados consistentes e prontos para análise. Sou membro da [LED | CIn - UFPE](https://www.linkedin.com/company/led-cin-ufpe/), a Liga de Engenharia de Dados do Centro de Informática.
+Estudante de Engenharia da Computação no CIn/UFPE, com foco em Engenharia de Dados. Construo pipelines ponta a ponta em AWS, Azure e GCP, com arquitetura Medallion (Bronze/Silver/Gold), processamento distribuído e modelagem dimensional.
 
-- 🔭 **Atualmente estou trabalhando em:** Construir e expandir meu portfólio de Engenharia de Dados, desenvolvendo projetos práticos que envolvem modelagem de dados, pipelines ETL e arquiteturas Lakehouse.
-- 🌱 **Atualmente estou aprendendo:** Aprofundando meus conhecimentos em processamento distribuído com **PySpark**, ambiente **Databricks**, orquestração de dados e soluções em Cloud (como Azure).
-- 🤝 **Faço parte da:** [LED | CIn - UFPE](https://www.linkedin.com/company/led-cin-ufpe/), liga acadêmica de Engenharia de Dados do CIn, participando de projetos práticos em equipe.
+Membro da [LED | CIn - UFPE](https://www.linkedin.com/company/led-cin-ufpe/), a Liga de Engenharia de Dados do Centro de Informática.
 
----
+## Stack
 
-### 🛠️ Conhecimentos e Ferramentas
+- **Linguagens:** Python, SQL
+- **Processamento:** PySpark, Spark SQL, Polars, Pandas, DuckDB
+- **Plataformas e armazenamento:** Databricks, Delta Lake, Unity Catalog, Parquet, PostgreSQL
+- **Orquestração:** Apache Airflow, Databricks Jobs
+- **Cloud:** AWS (S3, Lambda, EMR Serverless, Athena, ECR, IAM), Azure, GCP (Cloud Storage)
+- **Ferramentas:** Docker, Git, Power BI, Looker Studio
+- **Conceitos:** Data Lakehouse, Arquitetura Medallion, Modelagem Dimensional (Star Schema), ETL/ELT, Qualidade de Dados
 
-* **Linguagens:** Python, SQL
-* **Engenharia de Dados & Big Data:** PySpark, Databricks, Modelagem Dimensional
-* **Cloud & Ferramentas:** Azure, Git, GitHub
-* **Análise de Dados:** Pandas, Power BI
+## Certificações
 
----
+- [Microsoft Certified: Azure Data Fundamentals (DP-900)](https://learn.microsoft.com/api/credentials/share/pt-br/AndreVoigt-2563/324319CA09255D65?sharingId=5051D8804E941A27) — Microsoft, agosto de 2026
 
-### 📜 Certificações
+## Projetos
 
-* **[Microsoft Certified: Azure Data Fundamentals (DP-900)](https://learn.microsoft.com/api/credentials/share/pt-br/AndreVoigt-2563/324319CA09255D65?sharingId=5051D8804E941A27)** — Microsoft, agosto de 2026
+### [NYC Taxi OLAP: DuckDB + AWS Lambda + S3](https://github.com/AndreVVoigt/olap-lambda-duckdb)
+Engine analítica serverless sobre 308 milhões de corridas do táxi de Nova York (2019–2025), em Parquet particionado no S3 e consultada via AWS Lambda com DuckDB.
+- Ingestão idempotente dos 84 meses em 3,1 min, sem falhas, com regras de qualidade explícitas (descartar, sinalizar ou manter).
+- Agregação do lake inteiro reduzida de timeout (>60 s) para 5,7 s ao ajustar row groups do Parquet, que cortou as requisições ao S3 de ~2.550 para ~190.
+- Custo de ~US$ 0,0002 por consulta. [Documentação](https://docs.page/AndreVVoigt/olap-lambda-duckdb)
 
----
+**Stack:** Python, DuckDB, Parquet, AWS Lambda, S3, ECR, IAM, Docker
 
-### 🚀 Principais Projetos
+### [Data Lakehouse ANP: Preços de Combustíveis](https://github.com/AndreVVoigt/monitor-preco-combustiveis)
+Pipeline Medallion no Databricks com a série histórica (2013–2026) e a ingestão semanal dos preços de combustíveis da ANP.
+- Ingestão incremental via web scraping, com a carga histórica separada do job semanal para reduzir custo de computação.
+- Tratamento de schema drift na fonte e Star Schema (fato + 3 dimensões) consumido no Power BI.
 
-* **[Monitor de Preços de Combustíveis (ANP)](https://github.com/AndreVVoigt/monitor-preco-combustiveis)**
-  * **Resumo:** Desenvolvimento de um pipeline de dados automatizado para monitoramento contínuo dos preços de combustíveis no Brasil, utilizando dados públicos da ANP. O projeto realiza a ingestão recorrente (semanal) via web scraping, tratamento e padronização de dados históricos e incrementais, lidando com inconsistências de schema ao longo dos anos. Os dados são processados e estruturados para análise temporal e regional, permitindo acompanhar variações de preços ao longo do tempo.
-  * **Stack:** Python (Web Scraping, Pandas/PySpark), Databricks, SQL
+**Stack:** Databricks, Azure, PySpark, Spark SQL, Delta Lake, Unity Catalog, Power BI
 
-* **[Lakehouse Ecommerce](https://github.com/AndreVVoigt/lakehouse_ecommerce)**
-  * **Resumo:** Construção de um pipeline de dados ponta a ponta utilizando a arquitetura Medallion (Bronze, Silver, Gold). O projeto realiza a ingestão, limpeza e agregação de dados reais, com orquestração via Apache Airflow e processamento distribuído usando Spark no AWS EMR Serverless, deixando os dados prontos para consumo no Amazon Athena e ferramentas de BI.
-  * **Stack:** AWS (EMR Serverless, Athena), Apache Spark, Apache Airflow, Python
+### [Lakehouse E-commerce na AWS](https://github.com/AndreVVoigt/lakehouse_ecommerce)
+Pipeline Bronze/Silver/Gold sobre eventos de e-commerce, com jobs Spark no EMR Serverless orquestrados pelo Airflow.
+- Deduplicação por chave lógica, particionamento por data e agregações diárias (receita, ticket médio, usuários e sessões únicos).
+- Camada Gold consultada no Athena via tabelas externas.
 
-* **[Databricks Project 1: Bike Data Lakehouse](https://github.com/AndreVVoigt/databricks_project1)**
-  * **Resumo:** Construção de um pipeline ponta a ponta implementando a arquitetura Medallion (Bronze, Silver e Gold). O projeto engloba governança de dados com Unity Catalog, limpeza e validação utilizando PySpark e Spark SQL, e modelagem dimensional (Star Schema) para negócios. Todo o fluxo foi orquestrado e automatizado através de Databricks Jobs.
-  * **Stack:** Databricks, PySpark, Spark SQL, Unity Catalog, Delta Lake
+**Stack:** AWS (S3, EMR Serverless, Athena), Apache Spark, Apache Airflow, Docker, Python
 
-* **[Projeto ETL Olist: Pipeline e Dashboard de Vendas](https://github.com/AndreVVoigt/projeto-etl-olist)**
-  * **Resumo:** Implementação de um pipeline ETL completo e automatizado com os dados públicos do e-commerce Olist. O projeto extrai dados brutos de arquivos CSV, realiza transformações complexas com Python e Pandas, e os carrega em um banco de dados PostgreSQL estruturado. O resultado é consumido por um dashboard interativo no Google Looker Studio, apresentando indicadores-chave de negócio.
-  * **Stack:** Python (Pandas, SQLAlchemy), PostgreSQL, Google Looker Studio
+### [Bike Data Lakehouse (Databricks)](https://github.com/AndreVVoigt/databricks_project1)
+Lakehouse Medallion com governança no Unity Catalog, validação de qualidade em PySpark e Spark SQL e Star Schema na camada Gold, orquestrado com Databricks Jobs.
 
-* **[Pipeline Dengue: Sala de Situação](https://github.com/AndreVVoigt/pipeline-dengue)**
-  * **Resumo:** Construção de um pipeline de dados ponta a ponta para processar milhões de registros governamentais do DATASUS. O projeto extrai dados de um Data Lake no Google Cloud Storage, realiza transformações de alta performance em memória utilizando Python e Polars, e carrega os resultados consolidados em um banco PostgreSQL. Os dados finais alimentam um dashboard epidemiológico e geoespacial interativo no Google Looker Studio.
-  * **Stack:** Python (Polars, Pandas), Google Cloud Storage (GCP), PostgreSQL, Google Looker Studio
- 
-### 📫 Como me encontrar 
-* Você pode se conectar comigo no [LinkedIn](https://www.linkedin.com/in/andredovalevoigt).
+**Stack:** Databricks, PySpark, Spark SQL, Delta Lake, Unity Catalog
+
+### [Pipeline Dengue: Sala de Situação (DATASUS)](https://github.com/AndreVVoigt/pipeline-dengue)
+Pipeline sobre milhões de notificações de dengue do SINAN/DATASUS: Data Lake no Cloud Storage, transformação com Polars, carga no PostgreSQL e [dashboard geoespacial](https://lookerstudio.google.com/reporting/50adc11a-611b-452e-9957-15443d9927d1) no Looker Studio.
+
+**Stack:** Python, Polars, GCP (Cloud Storage), PostgreSQL, Looker Studio
+
+### [ETL Olist: Pipeline e Dashboard de Vendas](https://github.com/AndreVVoigt/projeto-etl-olist)
+ETL dos dados públicos da Olist com Pandas, carga em PostgreSQL e [dashboard](https://lookerstudio.google.com/reporting/74848e0d-43a6-4637-bb43-b380ca1b9603) de indicadores de vendas.
+
+**Stack:** Python, Pandas, SQLAlchemy, PostgreSQL, Looker Studio
+
+## Contato
+
+[LinkedIn](https://www.linkedin.com/in/andredovalevoigt)
